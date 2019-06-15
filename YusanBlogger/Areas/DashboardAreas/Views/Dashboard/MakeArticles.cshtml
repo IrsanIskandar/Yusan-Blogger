@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "MakeArticles";
+}
+
+<h2>Make Your Articles</h2>
+<div class="row clearfix">
+    <ol class="breadcrumb breadcrumb-bg-teal">
+        <li>
+            <a asp-area="DashboardAreas" asp-controller="Dashboard" asp-action="DashboardIndex">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <i class="material-icons">widgets</i>
+                <span>Articles Management</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="javascript:void(0);">
+                <i class="material-icons">chat_bubble</i>
+                <span>Making Articles</span>
+            </a>
+        </li>
+    </ol>
+</div>
+<div class="row clearfix">
+    <textarea name="CKEditorArticles" id="CKEditorArticles" rows="100" cols="90"></textarea>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        'use strict';
+        // Replace the <textarea id="CKEditorArticles"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace('CKEditorArticles', {
+            height: '550px',
+        });
+    </script>
+}

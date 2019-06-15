@@ -4,5 +4,19 @@
     Layout = "~/Areas/DashboardAreas/Views/Shared/_Layout.cshtml";
 }
 
-<h1>DashboardIndex</h1>
-
+<div class="block-header">
+    <h1>YUSAN BLOG DASHBOARD</h1>
+</div>
+<!-- Widgets -->
+<div class="row clearfix">
+    <partial name="_PartialWidgets" />
+</div>
+<!-- #END# Widgets -->
+<!-- CPU Usage -->
+<div class="row clearfix">
+    <partial name="_PartialCPUUsage" />
+</div>
+<!-- #END# CPU Usage -->
+<div class="row clearfix">
+    <partial name="_PartialBlogInfo" />
+</div>

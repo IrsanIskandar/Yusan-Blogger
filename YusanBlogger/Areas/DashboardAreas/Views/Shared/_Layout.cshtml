@@ -28,12 +28,12 @@
         <link href="~/css/themes/all-themes.css" rel="stylesheet" />
     </environment>
 </head>
-<body class="theme-red">
+<body class="theme-teal">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
-                <div class="spinner-layer pl-red">
+                <div class="spinner-layer pl-pink">
                     <div class="circle-clipper left">
                         <div class="circle"></div>
                     </div>
@@ -78,26 +78,9 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="block-header">
-                <h2>YUSAN BLOG DASHBOARD</h2>
-            </div>
-            <!-- Widgets -->
-            <div class="row clearfix">
-                <partial name="_PartialWidgets" />
-            </div>
-            <!-- #END# Widgets -->
-            <!-- CPU Usage -->
-            <div class="row clearfix">
-                <partial name="_PartialCPUUsage" />
-            </div>
-            <!-- #END# CPU Usage -->
             <!-- Content Body -->
-            <div class="row clearfix">
-                @RenderBody()
-            </div>
-            <div class="row clearfix">
-                <partial name="_PartialBlogInfo" />
-            </div>
+            @RenderBody()
+            <!-- #END# Content Body -->
         </div>
     </section>
 

@@ -65,6 +65,10 @@ namespace YusanBlogger
                     "DefaultAdmin", 
                     "DashboardAreas",
                     "DashboardAreas/{controller=Dashboard}/{action=DashboardIndex}");
+                routes.MapAreaRoute(
+                    "MakeArticles",
+                    "DashboardAreas",
+                    "DashboardAreas/{controller=Dashboard}/{action=MakeArticles}");
 
                 routes.MapRoute(
                     "Index", "{controller=Home}/{action=Index}");
