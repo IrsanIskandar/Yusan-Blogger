@@ -61,15 +61,34 @@ namespace YusanBlogger
 
             app.UseMvc(routes =>
             {
+                // DashboardAreas Dashboard Routes Config Controller
                 routes.MapAreaRoute(
                     "DefaultAdmin", 
                     "DashboardAreas",
                     "DashboardAreas/{controller=Dashboard}/{action=DashboardIndex}");
+
                 routes.MapAreaRoute(
                     "MakeArticles",
                     "DashboardAreas",
                     "DashboardAreas/{controller=Dashboard}/{action=MakeArticles}");
 
+                routes.MapAreaRoute(
+                    "ArticlesList",
+                    "DashboardAreas",
+                    "DashboardAreas/{controller=Dashboard}/{action=ArticlesList}");
+
+                // DashboardAreas Membership Routes Config Controller
+                routes.MapAreaRoute(
+                   "SignSystem",
+                   "DashboardAreas",
+                   "DashboardAreas/{controller=Membership}/{action=LoginSystem}");
+
+                routes.MapAreaRoute(
+                    "RegisteUsers",
+                    "DashboardAreas",
+                    "DashboardAreas/{controller=Membership}/{action=RegisterSystem}");
+
+                // Home Routes Config Controller
                 routes.MapRoute(
                     "Index", "{controller=Home}/{action=Index}");
             });

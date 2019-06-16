@@ -11,7 +11,7 @@
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">account_circle</i>Profile</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                     <li role="separator" class="divider"></li>
@@ -49,7 +49,7 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="#">Articles List</a>
+                                <a asp-area="DashboardAreas" asp-controller="Dashboard" asp-action="ArticlesList">Articles List</a>
                             </li>
                             <li>
                                 <a href="#">Update Articles</a>
@@ -63,10 +63,16 @@
             </li>
             <li>
                 <a href="javascript:void(0);" class="menu-toggle">
-                    <i class="material-icons">map</i>
+                    <i class="material-icons">people</i>
                     <span>Users Management</span>
                 </a>
                 <ul class="ml-menu">
+                    <li>
+                        <a >
+                            <i class="material-icons">person</i>
+                            <span>Create User</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="#">Users List</a>
                     </li>

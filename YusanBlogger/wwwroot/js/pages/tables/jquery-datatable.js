@@ -1,7 +1,5 @@
-$(function () {
-    $('.js-basic-example').DataTable({
-        responsive: true
-    });
+$(document).ready(function() {
+    $('.js-article-list').DataTable({ responsive: true, dom: 'Bfrtip' })
 
     //Exportable table
     $('.js-exportable').DataTable({

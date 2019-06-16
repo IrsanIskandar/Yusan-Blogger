@@ -28,5 +28,18 @@ namespace YusanBlogger.Areas.DashboardAreas.Controllers
         {
             return View();
         }
+
+        // GET Dashboard/ArticlesList/
+        [HttpGet]
+        public IActionResult ArticlesList()
+        {
+            return View();
+        }
+
+        // GET Dashboard/ArticlesList/5
+        public IActionResult GetArticles(int? id)
+        {
+            return View();
+        }
     }
 }
