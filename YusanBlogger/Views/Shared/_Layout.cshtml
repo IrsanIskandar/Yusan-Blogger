@@ -9,5 +9,16 @@
 </head>
 <body>
     @RenderBody()
+
+    <environment include="Development">
+        <!-- Jquery Core Js -->
+        <script src="~/plugins/jquery-3.3.1/jquery-3.3.1.min.js" asp-append-version="true"></script>
+        <!-- Bootstrap Core Js -->
+        <script src="~/plugins/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
+        <!-- Use SignalR Library -->
+        <script src="~/js/dist/browser/signalr.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
