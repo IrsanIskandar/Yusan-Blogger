@@ -1,22 +1,68 @@
 ﻿
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>@ViewData["Title"] - Yusan Blog</title>
+
+    <environment include="Development">
+        <!-- Favicon-->
+        <link rel="icon" href="~/images/favicon.ico" type="image/x-icon">
+        <!-- Cuntom Style -->
+        <link href="~/css/main.css" rel="stylesheet" />
+        <noscript>
+            <link href="~/css/noscript.css" rel="stylesheet" />
+        </noscript>
+    </environment>
 </head>
-<body>
-    @RenderBody()
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="#" class="logo"><strong>YUSAN</strong> <span>BLOGGER</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+        <!-- Menu -->
+        <nav id="menu">
+            <partial name="_NavBar" />
+        </nav>
+        <!-- Banner -->
+        <section id="banner" class="major">
+            <partial name="_Barner" />
+        </section>
+        <!-- Main -->
+        <div id="main">
+            @RenderBody()
+        </div>
+        <!-- Contact -->
+        <section id="contact">
+            <div class="inner">
+                <partial name="_Contact" />
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <partial name="_Footer" />
+        </footer>
+    </div>
 
     <environment include="Development">
         <!-- Jquery Core Js -->
         <script src="~/plugins/jquery-3.3.1/jquery-3.3.1.min.js" asp-append-version="true"></script>
-        <!-- Bootstrap Core Js -->
-        <script src="~/plugins/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
         <!-- Use SignalR Library -->
         <script src="~/js/dist/browser/signalr.min.js" asp-append-version="true"></script>
+        <!-- Custom Library -->
+        <script src="~/js/jquery.scrolly.min.js" asp-append-version="true"></script>
+        <script src="~/js/jquery.scrollex.min.js" asp-append-version="true"></script>
+        <script src="~/js/browser.min.js" asp-append-version="true"></script>
+        <script src="~/js/breakpoints.min.js" asp-append-version="true"></script>
+        <script src="~/js/util.js" asp-append-version="true"></script>
+        <script src="~/js/main.js" asp-append-version="true"></script>>
     </environment>
 
     @RenderSection("Scripts", required: false)

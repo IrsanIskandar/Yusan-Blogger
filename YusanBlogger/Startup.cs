@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using YusanBlogger.Areas.DashboardAreas.ServicesHelpers;
+using YusanBlogger.ServicesHelpers;
 
 namespace YusanBlogger
 {
@@ -17,8 +15,8 @@ namespace YusanBlogger
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            ConstantaHelpers.connStr = configuration.GetConnectionString("LocalConnectionDatabase");
-            ConstantaHelpers.Authority = configuration.GetSection("AuthServer").GetValue<string>("LocalServer");
+            ConstansHelpers.connStr = configuration.GetConnectionString("LocalConnectionDatabase");
+            ConstansHelpers.Authority = configuration.GetSection("AuthServer").GetValue<string>("LocalServer");
         }
 
         public IConfiguration Configuration { get; }
@@ -66,10 +64,10 @@ namespace YusanBlogger
             app.UseAuthentication();
 
             // Use SignalR
-            app.UseSignalR(routes =>
-            {
-                routes.MapHub<ServicesHubs>("/");
-            });
+            //app.UseSignalR(routes =>
+            //{
+            //    routes.MapHub<ServiceHubsHelpers>("/");
+            //});
 
             app.UseMvc(routes =>
             {

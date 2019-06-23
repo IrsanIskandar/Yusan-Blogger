@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace YusanBlogger.Areas.DashboardAreas.ServicesHelpers
+namespace YusanBlogger.ServicesHelpers
 {
-    public class ConstantaHelpers
+    public class ConstansHelpers
     {
         //Property Config Services
         public static string connectionString { get; set; }

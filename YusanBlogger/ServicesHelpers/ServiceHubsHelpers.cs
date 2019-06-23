@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 
-namespace YusanBlogger.Areas.DashboardAreas.ServicesHelpers
+namespace YusanBlogger.ServicesHelpers
 {
-    public class ServicesHubs : Hub
+    public class ServiceHubsHelpers : Hub
     {
         public async Task GetConnection(string conn)
         {

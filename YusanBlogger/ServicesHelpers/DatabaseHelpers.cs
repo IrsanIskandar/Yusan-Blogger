@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Dapper;
 
-namespace YusanBlogger.Areas.DashboardAreas.ServicesHelpers
+namespace YusanBlogger.ServicesHelpers
 {
     public class DatabaseHelpers
     {
