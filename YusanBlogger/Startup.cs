@@ -55,7 +55,6 @@ namespace YusanBlogger
             app.UseHttpsRedirection();
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
             app.UseSession();
             app.UseAuthentication();
 

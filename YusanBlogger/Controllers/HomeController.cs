@@ -12,5 +12,10 @@ namespace YusanBlogger.Controllers
         {
             return View();
         }
+
+        public IActionResult DetailPost()
+        {
+            return View();
+        }
     }
 }
